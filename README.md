@@ -3,7 +3,7 @@
 setInterval that waits for promises between ticks
 
 ``` bash
-npm install --save git+ssh://git@github.com/anzerr/think.library.git
+npm install --save git+http://git@github.com/anzerr/think.library.git
 ```
 
 ### `Example`

@@ -1,9 +1,9 @@
 
 ### `Intro`
-setInterval that waits for promises between ticks
+setInterval that waits for promises between ticks.
 
 ``` bash
-npm install --save git+https://git@github.com/anzerr/think.library.git
+npm install --save git+https://github.com/anzerr/think.library.git
 ```
 
 ### `Example`

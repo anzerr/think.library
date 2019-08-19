@@ -60,4 +60,4 @@ class Think {
 }
 
 module.exports = Think;
-
+module.exports.default = Think;

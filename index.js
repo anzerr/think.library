@@ -6,13 +6,14 @@ class Think {
 		this._time = time;
 		this._running = true;
 		this._i = 0;
-		setTimeout(() => {
+		this._lastTick = setTimeout(() => {
 			this._run();
 		}, this._time);
 	}
 
 	stop() {
 		this._running = false;
+		clearTimeout(this._lastTick);
 		return this;
 	}
 
@@ -27,20 +28,21 @@ class Think {
 
 	_run() {
 		if (!this._running) {
+			clearTimeout(this._lastTick);
 			return;
 		}
 
 		let tmp = this._callback(), i = this._i;
 		if (tmp instanceof Promise) {
 			tmp.then(() => {
-				setTimeout(() => {
+				this._lastTick = setTimeout(() => {
 					if (i === this._i) {
 						this._i += 1;
 						this._run();
 					}
 				}, this._time);
 			}).catch(() => {
-				setTimeout(() => {
+				this._lastTick = setTimeout(() => {
 					if (i === this._i) {
 						this._i += 1;
 						this._run();
@@ -48,7 +50,7 @@ class Think {
 				}, this._time);
 			});
 		} else {
-			setTimeout(() => {
+			this._lastTick = setTimeout(() => {
 				if (i === this._i) {
 					this._i += 1;
 					this._run();

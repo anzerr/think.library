@@ -12,8 +12,9 @@ const t = new Think(() => {
 	console.log('tick', i);
 	if (i > 10) {
 		t.stop();
+	} else {
+		t.start(); // should do nothing
 	}
-	t.start(); // should do nothing
 	i += 1;
 	return wait();
 }, 100);

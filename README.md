@@ -1,5 +1,7 @@
 
 ### `Intro`
+![GitHub Actions status | publish](https://github.com/anzerr/think.library/workflows/publish/badge.svg)
+
 setInterval that waits for promises between ticks.
 
 ``` bash

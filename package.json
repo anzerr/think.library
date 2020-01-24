@@ -1,7 +1,12 @@
 {
 	"name": "think.library",
 	"version": "1.0.8",
-	"keywords": [],
+	"description": "setInterval that works with promises",
+	"keywords": [
+		"javascipt",
+		"nodejs",
+		"util"
+	],
 	"homepage": "https://github.com/anzerr/think.library#readme",
 	"bugs": {
 		"url": "https://github.com/anzerr/think.library/issues"
@@ -14,9 +19,6 @@
 	"author": "anzerr",
 	"main": "index.js",
 	"types": "index.d.ts",
-	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
-	},
 	"eslintConfig": {
 		"extends": "eslint-config-basic"
 	},
